@@ -19,14 +19,20 @@ tr, td, th {
 
 .pool {
   width: 15%;
+  max-width: 160px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 160px;
+
+  /* Fix emoji truncation in Chrome */
+  word-break: keep-all;
+  min-width: 0;
+
   @media (max-width: 575px) {
     width: 75%;
   }
 }
+
 .pool-name {
   display: inline-block;
   vertical-align: text-top;
